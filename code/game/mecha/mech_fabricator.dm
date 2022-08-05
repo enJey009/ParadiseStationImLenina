@@ -4,7 +4,7 @@
 #define EXOFAB_SPEED_UPGRADE_MULTIPLIER 0.2
 
 /**
-  * # Exosuit Fabricator
+  * # Exosuit Fabricator NT
   *
   * A machine that allows for the production of exosuits and robotic parts.
   */
@@ -499,9 +499,43 @@
 		"Pod_Frame",
 		"Misc"
 	)
-
 /**
-  * # Robotic Fabricator
+  * # СССП МРЧ Фабрикатор
+  *
+  * Вариант Фабрикатора [/obj/machinery/mecha_part_fabricator].
+  */
+/obj/machinery/mecha_part_fabricator/ussp
+	name = "Фабрикатор МРЧ"
+	desc = "Создает Механизированно-роботизированные части."
+	icon_state = "fab-ussp-idle"
+	icon_open = "fab-ussp-o"
+	icon_closed = "fab-ussp-idle"
+	ui_theme = "nologo"
+	categories = list("Cyborg",
+				      "Cyborg Repair")
+
+/obj/machinery/mecha_part_fabricator/ussp/New()
+	..()
+	// Components
+	component_parts = list()
+	component_parts += new /obj/item/circuitboard/mechfab/syndicate(null)
+	component_parts += new /obj/item/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/stock_parts/manipulator(null)
+	component_parts += new /obj/item/stock_parts/micro_laser(null)
+	component_parts += new /obj/item/stack/sheet/glass(null)
+	RefreshParts()
+	if(is_taipan(z))
+		req_access = list(ACCESS_SYNDICATE)
+		
+/obj/machinery/mecha_part_fabricator/ussp/Initialize(mapload)
+	. = ..()
+	categories = list(
+		"Cyborg",
+		"Cyborg Repair"
+	)
+/**
+  * # Syndie Robot Fabricator
   *
   * Cyborgs-only variant of [/obj/machinery/mecha_part_fabricator].
   */
