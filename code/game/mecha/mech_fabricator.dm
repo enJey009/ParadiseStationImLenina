@@ -512,13 +512,14 @@
 	icon_closed = "fab-ussp-idle"
 	ui_theme = "nologo"
 	categories = list("Cyborg",
-				      "Cyborg Repair")
+				      "Cyborg Repair",
+					  "ТУ-802")
 
 /obj/machinery/mecha_part_fabricator/ussp/New()
 	..()
 	// Components
 	component_parts = list()
-	component_parts += new /obj/item/circuitboard/mechfab/syndicate(null)
+	component_parts += new /obj/item/circuitboard/mechfab/ussp(null)
 	component_parts += new /obj/item/stock_parts/matter_bin(null)
 	component_parts += new /obj/item/stock_parts/matter_bin(null)
 	component_parts += new /obj/item/stock_parts/manipulator(null)
@@ -527,13 +528,21 @@
 	RefreshParts()
 	if(is_taipan(z))
 		req_access = list(ACCESS_SYNDICATE)
-		
+
 /obj/machinery/mecha_part_fabricator/ussp/Initialize(mapload)
 	. = ..()
 	categories = list(
 		"Cyborg",
-		"Cyborg Repair"
+		"Cyborg Repair",
+		"ТУ-802"
 	)
+
+/obj/machinery/mecha_part_fabricator/ussp/Destroy()
+	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
+	materials.retrieve_all()
+	QDEL_NULL(local_designs)
+	return ..()
+
 /**
   * # Syndie Robot Fabricator
   *

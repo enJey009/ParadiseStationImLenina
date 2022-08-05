@@ -31,8 +31,8 @@
 	ME.attach(src)
 
 /obj/mecha/combat/durand/old
-	desc = "A retired, third-generation combat exosuit utilized by the Nanotrasen corporation. Originally developed to combat hostile alien lifeforms."
-	name = "Durand"
+	desc = "Один из удачных образцов от СССП. За основу был взят Durand, от буржуйской комании Nanotrasen."
+	name = "ТУ-802"
 	icon_state = "old_durand"
 	initial_icon = "old_durand"
 	step_in = 4

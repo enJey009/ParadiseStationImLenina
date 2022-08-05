@@ -120,6 +120,7 @@
 	construction_time = 200
 	category = list("Cyborg Repair")
 
+
 //Ripley
 /datum/design/ripley_chassis
 	name = "Exosuit Chassis (APLU \"Ripley\")"
@@ -387,6 +388,79 @@
 	materials = list(MAT_METAL=15000,MAT_DIAMOND=10000,MAT_TITANIUM=10000)
 	construction_time = 600
 	category = list("Gygax")
+
+// TU-802
+/datum/design/tu802_chassis
+	name = "Каркас экзокостюма (\"ТУ-802\")"
+	id = "tu802_chassis"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/chassis/tu802
+	materials = list(MAT_METAL=25000)
+	construction_time = 100
+	category = list("ТУ-802")
+
+/datum/design/tu802_torso
+	name = "Грудная обшивка (\"ТУ-802\")"
+	id = "tu802_torso"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/tu802_torso
+	materials = list(MAT_METAL=25000,MAT_GLASS=10000,MAT_SILVER=10000)
+	construction_time = 300
+	category = list("ТУ-802")
+
+/datum/design/tu802_head
+	name = "Головной элемент (\"ТУ-802\")"
+	id = "tu802_head"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/tu802_head
+	materials = list(MAT_METAL=10000,MAT_GLASS=15000,MAT_SILVER=2000)
+	construction_time = 200
+	category = list("ТУ-802")
+
+/datum/design/tu802_left_arm
+	name = "Левый ручной элемент (\"ТУ-802\")"
+	id = "tu802_left_arm"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/tu802_left_arm
+	materials = list(MAT_METAL=10000,MAT_SILVER=4000)
+	construction_time = 200
+	category = list("ТУ-802")
+
+/datum/design/tu802_right_arm
+	name = "Правый ручной элемент (\"ТУ-802\")"
+	id = "tu802_right_arm"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/tu802_right_arm
+	materials = list(MAT_METAL=10000,MAT_SILVER=4000)
+	construction_time = 200
+	category = list("ТУ-802")
+
+/datum/design/tu802_left_leg
+	name = "Левый двигательный элемент (\"ТУ-802\")"
+	id = "tu802_left_leg"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/tu802_left_leg
+	materials = list(MAT_METAL=15000,MAT_SILVER=4000)
+	construction_time = 200
+	category = list("ТУ-802")
+
+/datum/design/tu802_right_leg
+	name = "Правый двигательный элемент (\"ТУ-802\")"
+	id = "tu802_right_leg"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/tu802_right_leg
+	materials = list(MAT_METAL=15000,MAT_SILVER=4000)
+	construction_time = 200
+	category = list("ТУ-802")
+
+/datum/design/tu802_armor
+	name = "Броневая пластина (\"ТУ-802\")"
+	id = "tu802_armor"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/tu802_armor
+	materials = list(MAT_METAL=30000,MAT_URANIUM=25000,MAT_TITANIUM=20000)
+	construction_time = 600
+	category = list("ТУ-802")
 
 //Durand
 /datum/design/durand_chassis

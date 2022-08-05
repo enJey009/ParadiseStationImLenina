@@ -156,6 +156,49 @@
 	icon_state = "gygax_armour"
 	origin_tech = "materials=6;combat=4;engineering=4"
 
+//////////// ТУ-802
+
+/obj/item/mecha_parts/chassis/tu802
+	name = "Каркас экзокостюма (\"ТУ-802\")"
+
+/obj/item/mecha_parts/chassis/tu802/New()
+	..()
+	construct = new /datum/construction/mecha/tu802_chassis(src)
+
+/obj/item/mecha_parts/part/tu802_torso
+	name="Грудная обшивка (\"ТУ-802\")"
+	icon_state = "old_durand_harness"
+	origin_tech = "programming=2;materials=3;biotech=3;engineering=3"
+
+/obj/item/mecha_parts/part/tu802_head
+	name="Головной элемент (\"ТУ-802\")"
+	icon_state = "old_durand_head"
+	origin_tech = "programming=2;materials=3;magnets=3;engineering=3"
+
+/obj/item/mecha_parts/part/tu802_left_arm
+	name="Левый ручной элемент (\"ТУ-802\")"
+	icon_state = "old_durand_l_arm"
+	origin_tech = "programming=2;materials=3;engineering=3"
+
+/obj/item/mecha_parts/part/tu802_right_arm
+	name="Правый ручной элемент (\"ТУ-802\")"
+	icon_state = "old_durand_r_arm"
+	origin_tech = "programming=2;materials=3;engineering=3"
+
+/obj/item/mecha_parts/part/tu802_left_leg
+	name="Левый двигательный элемент (\"ТУ-802\")"
+	icon_state = "old_durand_l_leg"
+	origin_tech = "programming=2;materials=3;engineering=3"
+
+/obj/item/mecha_parts/part/tu802_right_leg
+	name="Правый двигательный элемент (\"ТУ-802\")"
+	icon_state = "old_durand_r_leg"
+	origin_tech = "programming=2;materials=3;engineering=3"
+
+/obj/item/mecha_parts/part/tu802_armor
+	name="Броневая пластина (\"ТУ-802\")"
+	icon_state = "old_durand_armour"
+	origin_tech = "materials=5;combat=4;engineering=4"
 
 //////////// Durand
 
