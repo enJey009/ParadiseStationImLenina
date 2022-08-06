@@ -916,7 +916,7 @@
 	var/obj/item/mecha_parts/chassis/const_holder = holder
 	const_holder.construct = new /datum/construction/reversible/mecha/tu802(const_holder)
 	const_holder.icon = 'icons/mecha/mech_construction.dmi'
-	const_holder.icon_state = "old_durand0"
+	const_holder.icon_state = "old_durand1"
 	const_holder.density = 1
 	qdel(src)
 	return
@@ -1017,155 +1017,155 @@
 	switch(index)
 		if(20)
 			user.visible_message("[user] connects the [holder] hydraulic systems", "You connect the [holder] hydraulic systems.")
-			holder.icon_state = "durand1"
+			holder.icon_state = "old_durand1"
 		if(19)
 			if(diff==FORWARD)
 				user.visible_message("[user] activates the [holder] hydraulic systems.", "You activate the [holder] hydraulic systems.")
-				holder.icon_state = "durand2"
+				holder.icon_state = "old_durand2"
 			else
 				user.visible_message("[user] disconnects the [holder] hydraulic systems", "You disconnect the [holder] hydraulic systems.")
-				holder.icon_state = "durand0"
+				holder.icon_state = "old_durand0"
 		if(18)
 			if(diff==FORWARD)
 				user.visible_message("[user] adds the wiring to the [holder].", "You add the wiring to the [holder].")
-				holder.icon_state = "durand3"
+				holder.icon_state = "old_durand3"
 			else
 				user.visible_message("[user] deactivates the [holder] hydraulic systems.", "You deactivate the [holder] hydraulic systems.")
-				holder.icon_state = "durand1"
+				holder.icon_state = "old_durand1"
 		if(17)
 			if(diff==FORWARD)
 				user.visible_message("[user] adjusts the wiring of the [holder].", "You adjust the wiring of the [holder].")
-				holder.icon_state = "durand4"
+				holder.icon_state = "old_durand4"
 			else
 				user.visible_message("[user] removes the wiring from the [holder].", "You remove the wiring from the [holder].")
 				var/obj/item/stack/cable_coil/coil = new /obj/item/stack/cable_coil(get_turf(holder))
 				coil.amount = 4
-				holder.icon_state = "durand2"
+				holder.icon_state = "old_durand2"
 		if(16)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs the central control module into the [holder].", "You install the central computer mainboard into the [holder].")
 				qdel(used_atom)
-				holder.icon_state = "durand5"
+				holder.icon_state = "old_durand5"
 			else
 				user.visible_message("[user] disconnects the wiring of the [holder].", "You disconnect the wiring of the [holder].")
-				holder.icon_state = "durand3"
+				holder.icon_state = "old_durand3"
 		if(15)
 			if(diff==FORWARD)
 				user.visible_message("[user] secures the mainboard.", "You secure the mainboard.")
-				holder.icon_state = "durand6"
+				holder.icon_state = "old_durand6"
 			else
 				user.visible_message("[user] removes the central control module from the [holder].", "You remove the central computer mainboard from the [holder].")
 				new /obj/item/circuitboard/mecha/durand/main(get_turf(holder))
-				holder.icon_state = "durand4"
+				holder.icon_state = "old_durand4"
 		if(14)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs the peripherals control module into the [holder].", "You install the peripherals control module into the [holder].")
 				qdel(used_atom)
-				holder.icon_state = "durand7"
+				holder.icon_state = "old_durand7"
 			else
 				user.visible_message("[user] unfastens the mainboard.", "You unfasten the mainboard.")
-				holder.icon_state = "durand5"
+				holder.icon_state = "old_durand5"
 		if(13)
 			if(diff==FORWARD)
 				user.visible_message("[user] secures the peripherals control module.", "You secure the peripherals control module.")
-				holder.icon_state = "durand8"
+				holder.icon_state = "old_durand8"
 			else
 				user.visible_message("[user] removes the peripherals control module from the [holder].", "You remove the peripherals control module from the [holder].")
 				new /obj/item/circuitboard/mecha/durand/peripherals(get_turf(holder))
-				holder.icon_state = "durand6"
+				holder.icon_state = "old_durand6"
 		if(12)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs the weapon control module into the [holder].", "You install the weapon control module into the [holder].")
 				qdel(used_atom)
-				holder.icon_state = "durand9"
+				holder.icon_state = "old_durand9"
 			else
 				user.visible_message("[user] unfastens the peripherals control module.", "You unfasten the peripherals control module.")
-				holder.icon_state = "durand7"
+				holder.icon_state = "old_durand7"
 		if(11)
 			if(diff==FORWARD)
 				user.visible_message("[user] secures the weapon control module.", "You secure the weapon control module.")
-				holder.icon_state = "durand10"
+				holder.icon_state = "old_durand10"
 			else
 				user.visible_message("[user] removes the weapon control module from the [holder].", "You remove the weapon control module from the [holder].")
 				new /obj/item/circuitboard/mecha/durand/targeting(get_turf(holder))
-				holder.icon_state = "durand8"
+				holder.icon_state = "old_durand8"
 		if(10)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs phasic scanner module to the [holder].", "You install phasic scanner module to the [holder].")
 				qdel(used_atom)
-				holder.icon_state = "durand11"
+				holder.icon_state = "old_durand11"
 			else
 				user.visible_message("[user] unfastens the weapon control module.", "You unfasten the weapon control module.")
-				holder.icon_state = "durand9"
+				holder.icon_state = "old_durand9"
 		if(9)
 			if(diff==FORWARD)
 				user.visible_message("[user] secures the phasic scanner module.", "You secure the phasic scanner module.")
-				holder.icon_state = "durand12"
+				holder.icon_state = "old_durand12"
 			else
 				user.visible_message("[user] removes the phasic scanner module from the [holder].", "You remove the phasic scanner module from the [holder].")
 				new /obj/item/stock_parts/scanning_module/phasic(get_turf(holder))
-				holder.icon_state = "durand10"
+				holder.icon_state = "old_durand10"
 		if(8)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs super capacitor to the [holder].", "You install super capacitor to the [holder].")
 				qdel(used_atom)
-				holder.icon_state = "durand13"
+				holder.icon_state = "old_durand13"
 			else
 				user.visible_message("[user] unfastens the phasic scanner module.", "You unfasten the phasic scanner module.")
-				holder.icon_state = "durand11"
+				holder.icon_state = "old_durand11"
 		if(7)
 			if(diff==FORWARD)
 				user.visible_message("[user] secures the super capacitor.", "You secure the super capacitor.")
-				holder.icon_state = "durand14"
+				holder.icon_state = "old_durand14"
 			else
 				user.visible_message("[user] removes the super capacitor from the [holder].", "You remove the super capacitor from the [holder].")
 				new /obj/item/stock_parts/capacitor/super(get_turf(holder))
-				holder.icon_state = "durand12"
+				holder.icon_state = "old_durand12"
 		if(6)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs the internal armor layer to the [holder].", "You install the internal armor layer to the [holder].")
-				holder.icon_state = "durand15"
+				holder.icon_state = "old_durand15"
 			else
 				user.visible_message("[user] unfastens the super capacitor.", "You unfasten the super capacitor.")
-				holder.icon_state = "durand13"
+				holder.icon_state = "old_durand13"
 		if(5)
 			if(diff==FORWARD)
 				user.visible_message("[user] secures the internal armor layer.", "You secure the internal armor layer.")
-				holder.icon_state = "durand16"
+				holder.icon_state = "old_durand16"
 			else
 				user.visible_message("[user] pries internal armor layer from the [holder].", "You pry internal armor layer from the [holder].")
 				var/obj/item/stack/sheet/metal/MS = new /obj/item/stack/sheet/metal(get_turf(holder))
 				MS.amount = 5
-				holder.icon_state = "durand14"
+				holder.icon_state = "old_durand14"
 		if(4)
 			if(diff==FORWARD)
 				user.visible_message("[user] welds the internal armor layer to the [holder].", "You weld the internal armor layer to the [holder].")
-				holder.icon_state = "durand17"
+				holder.icon_state = "old_durand17"
 			else
 				user.visible_message("[user] unfastens the internal armor layer.", "You unfasten the internal armor layer.")
-				holder.icon_state = "durand15"
+				holder.icon_state = "old_durand15"
 		if(3)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs Durand Armor Plates to the [holder].", "You install Durand Armor Plates to the [holder].")
 				qdel(used_atom)
-				holder.icon_state = "durand18"
+				holder.icon_state = "old_durand18"
 			else
 				user.visible_message("[user] cuts the internal armor layer from the [holder].", "You cut the internal armor layer from the [holder].")
-				holder.icon_state = "durand16"
+				holder.icon_state = "old_durand16"
 		if(2)
 			if(diff==FORWARD)
 				user.visible_message("[user] secures Durand Armor Plates.", "You secure Durand Armor Plates.")
-				holder.icon_state = "durand19"
+				holder.icon_state = "old_durand19"
 			else
 				user.visible_message("[user] pries Durand Armor Plates from the [holder].", "You pry Durand Armor Plates from the [holder].")
 				new /obj/item/mecha_parts/part/durand_armor(get_turf(holder))
-				holder.icon_state = "durand17"
+				holder.icon_state = "old_durand17"
 		if(1)
 			if(diff==FORWARD)
 				user.visible_message("[user] welds Durand Armor Plates to the [holder].", "You weld Durand Armor Plates to the [holder].")
 			else
 				user.visible_message("[user] unfastens Durand Armor Plates.", "You unfasten Durand Armor Plates.")
-				holder.icon_state = "durand18"
+				holder.icon_state = "old_durand18"
 	return 1
 
 //DURAND

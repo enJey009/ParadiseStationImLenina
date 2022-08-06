@@ -10,6 +10,7 @@
 	build_type = IMPRINTER
 	materials = list(MAT_GLASS = 1000)
 	build_path = /obj/item/circuitboard/aicore
+	locked = 1
 	category = list("Computer Boards")
 
 /datum/design/aifixer
@@ -30,6 +31,7 @@
 	build_type = IMPRINTER
 	materials = list(MAT_GLASS = 1000)
 	build_path = /obj/item/circuitboard/aiupload
+	locked = 1
 	category = list("Computer Boards")
 
 /datum/design/atmosalerts

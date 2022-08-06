@@ -634,8 +634,8 @@ CREATE TABLE `budget`
 	`amount` INT(10) UNSIGNED NOT NULL,
 	`source` VARCHAR(32) NOT NULL,
 	`date_start` DATETIME DEFAULT now() NOT NULL,
-	`date_end` DATETIME DEFAULT (now() + INTERVAL 1 MONTH),
-	`is_valid` BOOLEAN DEFAULT true NOT NULL,
+	-- `date_end` DATETIME DEFAULT (now() + INTERVAL 1 MONTH),
+	-- `is_valid` BOOLEAN DEFAULT TRUE NOT NULL,
 	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;

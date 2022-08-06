@@ -718,6 +718,17 @@ to destroy them and players will be able to make replacements.
 							/obj/item/stock_parts/manipulator = 2,
 							/obj/item/reagent_containers/glass/beaker = 2)
 
+/obj/item/circuitboard/protolathe/ussp
+	name = "Плата (Протолат)"
+	build_path = /obj/machinery/r_n_d/protolathe/ussp
+	board_type = "machine"
+	icon_state = "ussp_circuit"
+	origin_tech = "engineering=2;programming=2"
+	req_components = list(
+							/obj/item/stock_parts/matter_bin = 2,
+							/obj/item/stock_parts/manipulator = 2,
+							/obj/item/reagent_containers/glass/beaker = 2)
+
 /obj/item/circuitboard/chem_dispenser/soda
 	name = "Circuit board (Soda Machine)"
 	build_path = /obj/machinery/chem_dispenser/soda
@@ -729,6 +740,17 @@ to destroy them and players will be able to make replacements.
 /obj/item/circuitboard/circuit_imprinter
 	name = "Circuit board (Circuit Imprinter)"
 	build_path = /obj/machinery/r_n_d/circuit_imprinter
+	board_type = "machine"
+	origin_tech = "engineering=2;programming=2"
+	req_components = list(
+							/obj/item/stock_parts/matter_bin = 1,
+							/obj/item/stock_parts/manipulator = 1,
+							/obj/item/reagent_containers/glass/beaker = 2)
+
+/obj/item/circuitboard/circuit_imprinter/ussp
+	name = "Плата (Платопринтер)"
+	icon_state = "ussp_circuit"
+	build_path = /obj/machinery/r_n_d/circuit_imprinter/ussp
 	board_type = "machine"
 	origin_tech = "engineering=2;programming=2"
 	req_components = list(
@@ -778,7 +800,7 @@ to destroy them and players will be able to make replacements.
 							/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/mechfab/ussp
-	name = "Плата фабрикатора МРЧ"
+	name = "Плата (Фабрикатор МРЧ)"
 	icon_state = "ussp_circuit"
 	build_path = /obj/machinery/mecha_part_fabricator/ussp
 	origin_tech = "programming=2;engineering=2"
