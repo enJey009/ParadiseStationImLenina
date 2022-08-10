@@ -708,6 +708,17 @@ to destroy them and players will be able to make replacements.
 							/obj/item/stock_parts/manipulator = 1,
 							/obj/item/stack/sheet/glass = 1)
 
+/obj/item/circuitboard/autolathe/ussp
+	name = "Плата (Автолат)"
+	build_path = /obj/machinery/autolathe/ussp
+	board_type = "machine"
+	icon_state = "ussp_circuit"
+	origin_tech = "engineering=2;programming=2"
+	req_components = list(
+							/obj/item/stock_parts/matter_bin = 3,
+							/obj/item/stock_parts/manipulator = 1,
+							/obj/item/stack/sheet/glass = 1)
+
 /obj/item/circuitboard/protolathe
 	name = "Circuit board (Protolathe)"
 	build_path = /obj/machinery/r_n_d/protolathe

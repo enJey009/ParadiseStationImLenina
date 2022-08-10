@@ -1066,6 +1066,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 			"floating face",
 			"xeno queen",
 			"eldritch",
+			"lenin",
 			"ancient machine"
 			)
 			if(custom_hologram) //insert custom hologram
@@ -1083,6 +1084,8 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 						holo_icon = getHologramIcon(icon('icons/mob/ai.dmi',"holo3"))
 					if("eldritch")
 						holo_icon = getHologramIcon(icon('icons/mob/ai.dmi',"holo4"))
+					if("lenin")
+						holo_icon = getHologramIcon(icon('icons/mob/ai.dmi',"holo5"))
 					if("ancient machine")
 						holo_icon = getHologramIcon(icon('icons/mob/ancient_machine.dmi', "ancient_machine"))
 					if("custom")

@@ -102,3 +102,40 @@
 
 /obj/mecha/combat/gygax/dark/add_cell()
 	cell = new /obj/item/stock_parts/cell/bluespace(src)
+
+// СССП ЗИП-2 Вариация Гигакса
+
+/obj/mecha/combat/zip2
+	desc = "Экзокостюм производства СССП, славится своими размерами и толщиной брони."
+	name = "ЗИП-2"
+	icon_state = "zip-2"
+	initial_icon = "zip-2"
+	step_in = 3
+	dir_in = 1 //Facing North.
+	max_integrity = 250
+	deflect_chance = 5
+	armor = list(melee = 60, bullet = 40, laser = 30, energy = 25, bomb = 30, bio = 0, rad = 60, fire = 100, acid = 100)
+	max_temperature = 30000
+	infra_luminosity = 6
+	leg_overload_coeff = 2
+	wreckage = /obj/structure/mecha_wreckage/gygax //ЗИП-2 РЕДАКТИРОВАТЬ
+	internal_damage_threshold = 35
+	max_equip = 3
+	maxsize = 2
+	step_energy_drain = 3
+	normal_step_energy_drain = 3
+
+/obj/mecha/combat/zip2/GrantActions(mob/living/user, human_occupant = 0)
+	..()
+	overload_action.Grant(user, src)
+
+/obj/mecha/combat/zip2/RemoveActions(mob/living/user, human_occupant = 0)
+	..()
+	overload_action.Remove(user)
+
+/obj/mecha/combat/zip2/loaded/New()
+	..()
+	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/energy/taser
+	ME.attach(src)
+	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/flashbang
+	ME.attach(src)

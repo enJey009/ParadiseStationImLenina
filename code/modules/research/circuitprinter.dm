@@ -123,11 +123,11 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 	container_type = OPENCONTAINER
 
 	categories = list(
-								"AI Modules",
-								"Computer Boards",
-								"Engineering Machinery",
-								"Exosuit Modules",
-								"Hydroponics Machinery",
+								"Платы ИИ",
+								"Компьютерные платы",
+								"Инженерные платы",
+								"Экзокостюмы",
+								"Гидропоника",
 								"Medical Machinery",
 								"Misc. Machinery",
 								"Research Machinery",

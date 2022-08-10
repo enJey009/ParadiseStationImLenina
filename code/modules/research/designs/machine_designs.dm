@@ -232,6 +232,16 @@
 	build_path = /obj/item/circuitboard/autolathe
 	category = list("Research Machinery")
 
+/datum/design/autolathe/ussp
+	name = "Плата (Автолат)"
+	desc = "Основной компонент для создания Автолата."
+	id = "autolathe_ussp"
+	req_tech = list("programming" = 3, "engineering" = 3)
+	build_type = IMPRINTER
+	materials = list(MAT_GLASS = 1000)
+	build_path = /obj/item/circuitboard/autolathe/ussp
+	category = list("Research Machinery")
+
 /datum/design/circuit_imprinter
 	name = "Machine Board (Circuit Imprinter)"
 	desc = "The circuit board for a Circuit Imprinter."

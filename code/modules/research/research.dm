@@ -180,6 +180,23 @@ research holder datum.
 
 	return ..()
 
+//USSP Autolathe files
+/datum/research/autolathe/ussp
+
+/datum/research/autolathe/ussp/DesignHasReqs(var/datum/design/D)
+	return D && (D.build_type & AUTOLATHE) && ("initial" in D.category)
+
+/datum/research/autolathe/ussp/CanAddDesign2Known(var/datum/design/design)
+	// Specifically excludes circuit imprinter and mechfab
+	if(design.locked || !(design.build_type & (AUTOLATHE|PROTOLATHE|CRAFTLATHE)))
+		return FALSE
+
+	for(var/mat in design.materials)
+		if(mat != MAT_METAL && mat != MAT_GLASS)
+			return FALSE
+
+	return ..()
+
 //Biogenerator files
 /datum/research/biogenerator/New()
 	for(var/T in (subtypesof(/datum/tech)))
